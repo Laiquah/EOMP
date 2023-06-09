@@ -94,16 +94,18 @@ let products = [
 let divProducts = document.querySelector('#products');
 products.forEach((data)=> {
     divProducts.innerHTML += `
+    <div class ="col-4 ">
     <div class="card">
         <h5 class="display-5">${data.title}</h5>
         <div class="card-body">
             <p class="text-black">
-               <img src="${data.image}" alt="image" loading="lazy" class="img-fluid">
+               <img src="${data.image}" alt="image" loading="lazy" class="img-fluid" id="img">
             </p>
             <p class="text-black">
                 ${data.description} 
             </p>
         </div>
+    </div>
     </div>
     `
 })
