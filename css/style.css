@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    background-color: #FFEAD2 !important;
+}
+
+#footer{
+    color: black !important;
+    font-size: medium !important;
+    font-weight: bold;
+}
+
+#card{
+    background-color: #FFEAD2 !important;
+    text-align: center;
+}
+
+img{
+    width: 10rem;
+}
