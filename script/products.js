@@ -4,90 +4,105 @@ let products = [
         image: 'https://i.postimg.cc/gkp68WVj/Screenshot-2023-06-09-152916.png',
         title: 'AirsPops Pro',
         description: 'The Airscream Pro or AirPops / AirPops Pro is the perfect device for every palate, blending simple, aesthetic design with peak practical performance. AirsPops Pro delivers a velvety-smooth experience from start to finish, by capturing every detail of the authentic flavours and bringing them forth.',
+        button: 'add to cart'
     },
     {
         id: 2,
-        title: 'AirsPops Pro - Nardo Grey',
+        title: 'AirsPops Pro',
         image: 'https://i.postimg.cc/XN2Ns6FQ/Screenshot-2023-06-09-152928.png',
         description: 'The Airscream Pro or AirPops / AirPops Pro is the perfect device for every palate, blending simple, aesthetic design with peak practical performance. AirsPops Pro delivers a velvety-smooth experience from start to finish, by capturing every detail of the authentic flavours and bringing them forth. The device is just in a different colour.',
+        button: 'add to cart'
     },
     {
         id: 3,
         image: 'https://i.postimg.cc/Y0Xsw3km/Screenshot-2023-06-09-152940.png',
         title: 'AirsPops Pro Cartridge',
         description: 'A 2ml refillable cartridge that connects magnetically to the AirsPops Pro or AirEgg device. Each pack comes with two (2) cartridges.',
+        button: 'add to cart'
     },
     {
         id: 4,
         image: 'https://i.postimg.cc/YSZX89RQ/Screenshot-2023-06-09-153005.png',
         title: 'bottle. by AirsPops Vape Kit',
         description: 'bottle. by AirsPops is an all-ready vape pod, with an adjustable airflow system that provides a good fit for both direct to lung and mouth to lung vaping preferences.',
+        button: 'add to cart'
     },
     {
         id: 5,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 6,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 7,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 8,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 9,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 10,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 11,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 12,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 13,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 14,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     },
     {
         id: 15,
         image: 'https://i.postimg.cc/dVn8C99f/Screenshot-2023-05-26-145340.png',
         title: 'BMI calculator',
         description: 'This is a task we had to do in relation to understand how javscript works.',
+        button: 'add to cart'
     }
 ]
 
@@ -104,6 +119,7 @@ products.forEach((data)=> {
             <p class="text-black">
                 ${data.description} 
             </p>
+            <button id="btn">${data.button}</button>
         </div>
     </div>
     </div>

@@ -51,6 +51,9 @@ h5{
     align-items: center !important;
 }
 
-/* .col-4{
-    margin: 2px !important;
-} */
+#btn{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-left: 4rem !important;
+    background-color: ;
+}
