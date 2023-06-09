@@ -27,3 +27,7 @@ body{
 img{
     width: 10rem;
 }
+
+.card{
+    width: fit-content;
+}
