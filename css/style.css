@@ -107,3 +107,16 @@ h5{
     background-color: #E1AEFF;
     border: 4px solid #E1AEFF;
 }
+
+#containers{
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    width: 20rem !important;
+}
+
+.crow{
+    display: inline-block !important;
+}
