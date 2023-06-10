@@ -73,6 +73,7 @@ h5{
 
 #h6{
     font-style: italic;
+    text-align: center;
 }
 
 #h1{
@@ -82,4 +83,27 @@ h5{
 #h14{
     font-weight: bolder;
     text-align: center; 
+    text-decoration: underline;
+}
+
+#p{
+    text-align: center;
+    margin-top: 6rem;
+}
+
+#carousel{
+    width: 40rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btns{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-left: 45rem !important;
+    margin-bottom: 1rem;
+    background-color: #E1AEFF;
+    border: 4px solid #E1AEFF;
 }
