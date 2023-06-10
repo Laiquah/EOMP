@@ -55,5 +55,31 @@ h5{
     padding: 0.5rem;
     border-radius: 1rem;
     margin-left: 4rem !important;
-    background-color: ;
+}
+
+#image{
+    width: 40rem;
+    margin: 2rem;
+}
+
+#container{
+    display: flex;
+    justify-content: space-around;
+}
+
+#cont{
+    margin-top: 10rem;
+}
+
+#h6{
+    font-style: italic;
+}
+
+#h1{
+    font-weight: bolder;
+}
+
+#h14{
+    font-weight: bolder;
+    text-align: center; 
 }
