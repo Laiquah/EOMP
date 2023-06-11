@@ -271,8 +271,8 @@ ul{
   }
   
   .btn {
-    background-color: #04AA6D;
-    color: white;
+    background-color:  #E1AEFF;
+    color: black;
     padding: 12px;
     margin: 10px 0;
     border: none;
@@ -283,7 +283,7 @@ ul{
   }
   
   .btn:hover {
-    background-color: #45a049;
+    background-color: #c26cf4;
   }
   
   span.price {
@@ -302,5 +302,91 @@ ul{
 @media screen and (max-width:300px){
   #container{
     display: inline-block;
+  }
+
+  #image{
+    width: 15rem;
+    margin-left: 2rem;
+  }
+
+  #h1{
+    text-align: center;
+  }
+
+  #cont{
+    margin-top: 0rem;
+  }
+
+  #h14{
+    margin-top: 1rem;
+  }
+
+  #p{
+    margin-top: 1rem;
+  }
+
+  .card{
+    width: 280px;
+  }
+
+  #img{
+    margin-left: 0rem;
+  }
+
+  #btn{
+    margin-left: 5rem;
+  }
+
+  .container1{
+    margin: 1rem;
+    width: 280px;
+  }
+
+  #cname{
+    width: 250px !important;
+  }
+
+  #fname{
+    width: 250px !important;
+  }
+
+  #email{
+    width: 250px !important;
+  }
+
+  #adr{
+    width: 250px !important;
+  }
+
+  #city{
+    width: 250px !important;
+  }
+
+  #state{
+    width: 250px !important;
+  }
+
+  #zip{
+    width: 250px !important;
+  }
+
+  #ccnum{
+    width: 250px !important;
+  }
+
+  #expmonth{
+    width: 250px !important;
+  }
+
+  #expyear{
+    width: 250px !important;
+  }
+
+  #cvv{
+    width: 250px !important;
+  }
+
+  .btn{
+    width: 230px !important;
   }
 }
