@@ -117,6 +117,7 @@ h5{
 #btns{
     padding: 0.5rem;
     border-radius: 1rem;
+    width: max-content;
     margin-left: 45rem !important;
     margin-bottom: 1rem;
     background-color: #E1AEFF;
@@ -242,7 +243,7 @@ ul{
     padding: 0 16px;
   }
   
-  .container {
+  .container1 {
     background-color: #E1AEFF;
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
@@ -297,3 +298,9 @@ ul{
       margin-bottom: 20px;
     }
   }
+
+@media screen and (max-width:300px){
+  #container{
+    display: inline-block;
+  }
+}
