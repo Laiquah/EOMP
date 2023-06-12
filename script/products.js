@@ -151,17 +151,21 @@ products.forEach((data)=> {
     <div class ="col-4 ">
     <div class="card">
         <h5 class="display-5">${data.title}</h5>
+        <div class="text-black">
+           <img src="${data.image}" alt="image" loading="lazy" class="img-fluid" id="img">
+        </div>
         <div class="card-body">
-            <p class="text-black">
-               <img src="${data.image}" alt="image" loading="lazy" class="img-fluid" id="img">
-            </p>
-            <p class="text-black" id="price">
+            <div class="text-black bod">
+            <p id="price">
                 ${data.price} 
             </p>
-            <p class="text-black" id="text">
+            <p id="text">
                 ${data.description} 
             </p>
+            </div>
+            <div class="knob">
             <button id="btn">${data.button}</button>
+            </div>
         </div>
     </div>
     </div>
