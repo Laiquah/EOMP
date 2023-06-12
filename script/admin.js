@@ -1,4 +1,4 @@
-let data = JSON.parse(localStorage.getItem("products"))
+let flowers = JSON.parse(localStorage.getItem("products"))
   ? JSON.parse(localStorage.getItem("products"))
   : localStorage.setItem(
       "products",
@@ -10,7 +10,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Rose",
           description:
             '"A rose is a delicate flower with velvety petals that unfold in a symmetrical pattern, showcasing its timeless elegance. Its captivating fragrance and vibrant colors make it a symbol of love, beauty, and passion."',
-          button: "add to cart",
           price: "R 100.00",
         },
         {
@@ -20,7 +19,6 @@ let data = JSON.parse(localStorage.getItem("products"))
             "https://i.postimg.cc/N09Fsf3P/jordan-cormack-79-Ruac-Ui-XUI-unsplash.jpg",
           description:
             '"A sunflower is a tall and majestic flower that stands proudly with its vibrant yellow petals and a dark center filled with seeds. Its large, cheerful blooms follow the movement of the sun, symbolizing positivity, happiness, and a sunny disposition."',
-          button: "add to cart",
           price: "R 160.00",
         },
         {
@@ -30,7 +28,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Lily",
           description:
             '"A lily is an exquisite flower with elegant, trumpet-shaped blooms and long, slender stems. Its delicate petals, often in shades of white, pink, or orange, exude a sweet fragrance, adding a touch of grace and purity to any setting."',
-          button: "add to cart",
           price: "R 500.00",
         },
         {
@@ -40,7 +37,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Jasmine",
           description:
             '"Jasmine is a fragrant flower with small, delicate white blossoms that release a sweet and intoxicating scent, especially in the evening. Its vining nature allows it to gracefully climb and adorn trellises, walls, and fences, creating a romantic and enchanting atmosphere wherever it blooms."',
-          button: "add to cart",
           price: "R 70.00",
         },
         {
@@ -50,7 +46,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Daisy",
           description:
             '"A daisy is a simple and charming flower with a sunny yellow center surrounded by delicate white petals. Its cheerful and unassuming nature makes it a symbol of innocence, purity, and the beauty found in simplicity."',
-          button: "add to cart",
           price: "R 150.00",
         },
         {
@@ -59,7 +54,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Tulip",
           description:
             '"A tulip is a graceful flower with smooth, upright stems and vibrant, cup-shaped blooms that come in a variety of colors, including red, yellow, pink, and purple. Its elegant form and striking colors make it a symbol of spring, renewal, and beauty."',
-          button: "add to cart",
           price: "R 200.00",
         },
         {
@@ -68,7 +62,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Dahlia",
           description:
             '"A dahlia is a stunning flower with intricate, layered petals that form a beautiful and symmetrical bloom. Available in a wide range of colors and sizes, dahlias showcase a remarkable diversity, bringing vibrancy and elegance to gardens and floral arrangements alike."',
-          button: "add to cart",
           price: "R 140.00",
         },
         {
@@ -78,7 +71,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Orchid",
           description:
             '"An orchid is an exquisite flower with intricate, delicate blooms that often display vibrant colors and intriguing patterns. Its elegant and exotic appearance, combined with its reputation as a symbol of luxury and refinement, makes the orchid a captivating and sought-after addition to any floral collection or display."',
-          button: "add to cart",
           price: "R 200.00",
         },
         {
@@ -88,7 +80,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Snowberries",
           description:
             '"Snowberries are small, round berries that grow in clusters and are known for their distinctive white color. These berries create a striking contrast against their dark green foliage, adding a touch of winter charm to gardens and landscapes."',
-          button: "add to cart",
           price: "R 200.00",
         },
         {
@@ -97,7 +88,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Lavender",
           description:
             '"Lavender is a fragrant herb with slender, silver-green foliage and clusters of small, aromatic purple flowers that adorn its stems. Its soothing scent and calming properties have made it a popular choice for aromatherapy, as well as a delightful addition to gardens, attracting bees and butterflies with its beauty."',
-          button: "add to cart",
           price: "R 412.00",
         },
         {
@@ -107,16 +97,13 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Aster",
           description:
             '"Aster is a dainty flower with vibrant petals that come in shades of purple, pink, blue, and white, resembling a small star. Its delicate yet resilient nature and late-season blooming make it a beloved addition to gardens, providing a burst of color and attracting pollinators as the summer comes to a close."',
-          button: "add to cart",
           price: "R 12.00",
         },
         {
           id: 12,
           image: "https://i.postimg.cc/qM4DmxFQ/marigold.jpg",
           title: "Marigold",
-          description:
-            '"Marigolds are cheerful and vibrant flowers with golden, orange, and yellow petals that resemble rays of sunshine. Their compact size and resilience make them a popular choice for borders and containers, adding a burst of color and a touch of warmth to any garden or landscape."',
-          button: "add to cart",
+          description:'"Marigolds are cheerful and vibrant flowers with golden, orange, and yellow petals that resemble rays of sunshine. Their compact size and resilience make them a popular choice for borders and containers, adding a burst of color and a touch of warmth to any garden or landscape."',
           price: "R 240.00",
         },
         {
@@ -125,7 +112,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Cherry Blossom",
           description:
             '"Cherry blossoms are delicate and ethereal flowers that grace the branches of cherry trees, creating a breathtaking sight. Their soft pink or white petals, blooming en masse, symbolize the arrival of spring and evoke a sense of beauty, transience, and renewal."',
-          button: "add to cart",
           price: "R 1050.00",
         },
         {
@@ -135,7 +121,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Bellflower",
           description:
             '"Bellflowers, also known as Campanula, are charming and bell-shaped flowers that come in various shades of blue, purple, pink, and white. Their graceful, drooping blooms and slender stems add an elegant touch to gardens and floral arrangements, enchanting with their whimsical beauty."',
-          button: "add to cart",
           price: "R 130.00",
         },
         {
@@ -144,7 +129,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Dandelion",
           description:
             '"A dandelion is a resilient and tenacious weed with bright yellow flowers that transform into fluffy seed heads known as "blowballs." These blowballs disperse in the wind, carrying the dandelions seeds far and wide, making it a symbol of resilience, wishes, and childhood memories of blowing the seeds and making a wish."',
-          button: "add to cart",
           price: "R 550.00",
         },
         {
@@ -154,7 +138,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Myosotis",
           description:
             '"Myosotis, commonly known as forget-me-not, is a delicate and charming flower with tiny, five-petaled blooms in shades of blue, pink, or white. Its dainty appearance and the distinctive yellow or white center create a lovely contrast, while its name evokes sentiments of remembrance, loyalty, and enduring love."',
-          button: "add to cart",
           price: "R 2200.00",
         },
         {
@@ -163,7 +146,6 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Pansy",
           description:
             '"Pansies are delightful flowers with velvety petals that come in a wide array of vibrant colors, including shades of purple, yellow, orange, and white. Their distinct "faces" with contrasting hues and delicate patterns add a touch of whimsy and cheerfulness to gardens and floral displays, making them a beloved symbol of free-spiritedness and joy."',
-          button: "add to cart",
           price: "R 100.00",
         },
         {
@@ -172,29 +154,27 @@ let data = JSON.parse(localStorage.getItem("products"))
           title: "Strawflower",
           description:
             '"Strawflowers are unique flowers with papery petals that retain their vibrant colors even after they have been picked and dried. Their petals, which can be shades of yellow, orange, pink, or red, give them a straw-like appearance, adding an intriguing texture and durability to bouquets and crafts."',
-          button: "add to cart",
           price: "R 50.00",
         },
       ])
     );
 
-const addBtn = document.querySelector('#addBtn');
-
-addBtn.addEventListener('click', addItem);
-function addItem(){
-    // event.preventDefault();
-    if(todoInput.value == ''){
-        alert('Input is Empty!')
-    } else {
-        todoList.push({
-            id: tempID,
-            name: todoInput.value,
-            completed: false,
-            date: new Date()
-        });
-        tempID++;
-        todoInput.value = '';
-        localStorage.setItem('todo-list', JSON.stringify(todoList));
-        renderList();
-    }
-}
+    Object.keys(flowers).forEach((products) =>{
+      let data = data[products];
+      let p = document.querySelector('#tableRow');
+      console.log(data[products]);
+      p.innerHTML +=`
+      <div class="table-responsive">
+      <tbody id="admin">
+        <tr>
+          <th scope="row">#1</th>
+          <td>${stuff.title}</td>
+          <td><img src="${stuff.image}" alt="logo" loading="lazy"></td>
+          <td>${stuff.price}</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+        </tr>
+      </tbody>
+      </div>
+      `
+    });
