@@ -18,7 +18,7 @@ body{
 
 #header{
     background-color:#684452 !important;
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 #footer{
@@ -40,6 +40,13 @@ body{
 
 img{
     width: 15rem;
+}
+
+#images{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 30rem;
 }
 
 .card{
@@ -397,6 +404,7 @@ ul{
 
   #cont{
     margin-top: 0rem;
+    margin-bottom: 2rem !important;
   }
 
   #h14{

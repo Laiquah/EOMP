@@ -152,9 +152,9 @@ form{
     align-items: center !important;
 }
 
-  .contact {
+  /* .contact {
     height: 110vh;
-}
+} */
 
 .contactsForm {
     display: flex;
