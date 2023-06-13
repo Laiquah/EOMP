@@ -159,18 +159,19 @@ let flowers = JSON.parse(localStorage.getItem("products"))
       ])
     );
 
-    Object.keys(flowers).forEach((products) =>{
-      let data = data[products];
+    Object.keys(flowers).forEach((flower) =>{
+      let data = flowers[flower];
       let p = document.querySelector('#tableRow');
-      console.log(data[products]);
+      console.log(data[flowers]);
       p.innerHTML +=`
       <div class="table-responsive">
       <tbody id="admin">
         <tr>
-          <th scope="row">#1</th>
-          <td>${stuff.title}</td>
-          <td><img src="${stuff.image}" alt="logo" loading="lazy"></td>
-          <td>${stuff.price}</td>
+          <th scope="row">${data.id}</th>
+          <td>${data.title}</td>
+          <td><img src="${data.image}" alt="logo" loading="lazy"></td>
+          <td>${data.description}</td>
+          <td>${data.price}</td>
           <td><button>Edit</button></td>
           <td><button>Delete</button></td>
         </tr>
