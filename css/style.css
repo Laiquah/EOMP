@@ -21,17 +21,18 @@ body{
     font-family: 'Kanit', sans-serif;
     font-family: 'Rubik', sans-serif;
     font-family: 'Ubuntu', sans-serif;
-    /* height: 100vh !important; */
+    /* height: 10vh !important; */
     background-image: url(https://i.postimg.cc/L5Mn0yXk/biel-morro-kc-Ki-Bc-DTJt4-unsplash-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 section{
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 #h12{
+    /* margin-top: 200rem !important; */
     font-weight: bolder;
     text-align: center; 
     text-decoration: underline;
