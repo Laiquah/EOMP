@@ -6,27 +6,62 @@
     box-sizing: border-box;
 }
 
-html,
+html{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    /* background-image: url(https://i.postimg.cc/L5Mn0yXk/biel-morro-kc-Ki-Bc-DTJt4-unsplash-1.jpg); */
+    background-size: cover;
+}
+
 body{
     /* overflow-x: hidden; */
     font-family: 'Bebas Neue', sans-serif;
     font-family: 'Kanit', sans-serif;
     font-family: 'Rubik', sans-serif;
     font-family: 'Ubuntu', sans-serif;
-    background-color: #684452;
+    /* height: 100vh !important; */
+    background-image: url(https://i.postimg.cc/L5Mn0yXk/biel-morro-kc-Ki-Bc-DTJt4-unsplash-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section{
+  margin-top: 8rem;
+}
+
+#h12{
+    font-weight: bolder;
+    text-align: center; 
+    text-decoration: underline;
+    color: white;
+}
+
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #header{
-    background-color:#684452 !important;
-    /* height: 80vh; */
+    /* background-image: url(https://i.postimg.cc/L5Mn0yXk/biel-morro-kc-Ki-Bc-DTJt4-unsplash-1.jpg); */
+    background-color: transparent;
+    scroll-behavior: smooth;
 }
+/* 
+.navbar{
+  backdrop-filter: blur(12px) !important;
+} */
 
 #footer{
   color: white !important;
   font-size: medium !important;
   font-weight: bold;
   text-align: center;
-  background-color:#684452;
+  /* position: fixed; */
+  /* background-color:#684452; */
 }
 
 #card{
@@ -95,9 +130,9 @@ h5{
 }
 
 .nav-link{
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   margin: 0.5rem;
-  color:#EDB1F1 !important;
+  color:white !important;
   font-family: 'Gamja Flower', cursive;
 }
 
@@ -116,12 +151,12 @@ h5{
 #h6{
     font-style: italic;
     text-align: center;
-    color:#EDB1F1;
+    color: white;
 }
 
 #h1{
     font-weight: bolder;
-    color: #EDB1F1;
+    color: white;
 }
 
 #h14{
