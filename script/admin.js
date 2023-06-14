@@ -1,4 +1,4 @@
-let flowers = JSON.parse(localStorage.getItem("products"))
+let flowers = JSON.parse(localStorage.getItem("products"));
 //   ? JSON.parse(localStorage.getItem("products"))
 //   : localStorage.setItem(
 //       "products",
@@ -159,26 +159,35 @@ let flowers = JSON.parse(localStorage.getItem("products"))
 //       ])
 //     );
 
-    Object.keys(flowers).forEach((flower) =>{
-      let data = flowers[flower];
-      let p = document.querySelector('#tableRow');
-      console.log(data[flowers]);
-      p.innerHTML +=`
+displayProducts();
+
+function displayProducts() {
+  Object.keys(flowers).forEach((flower) => {
+    let data = flowers[flower];
+    let p = document.querySelector("#tableRow");
+    console.log(data.description);
+    p.innerHTML += `
       <div class="table-responsive">
       <tbody id="admin">
         <tr>
-          <th scope="row">${data.id}</th>
-          <td>${data.title}</td>
-          <td><img src="${data.image}" alt="logo" loading="lazy"></td>
-          <td>${data.description}</td>
-          <td>${data.price}</td>
+          <th scope="row" id="newId">${data.id}</th>
+          <td id="newTitle">${data.title}</td>
+          <td id="newImage"><img src="${
+            data.image
+          }" alt="logo" loading="lazy"></td>
+          <td id="newDesc">${data.description}</td>
+          <td id="newPrice">${data.price}</td>
           <td>
-          <button type="button" class="btn" data-bs-toggle="modal" id="edit" data-bs-target='#editModal${data.id}'>
+          <button type="button" class="btn" data-bs-toggle="modal" id="edit" data-bs-target='#editModal${
+            data.id
+          }'>
             Edit
           </button>
           
           <!-- Modal -->
-          <div class="modal fade" id='editModal${data.id}' tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+          <div class="modal fade" id='editModal${
+            data.id
+          }' tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -189,29 +198,41 @@ let flowers = JSON.parse(localStorage.getItem("products"))
                 <form>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">ID:</label>
-                  <input type="ID" class="form-control" id="ID" aria-describedby="emailHelp" value="${data.id}">
+                  <input type="ID" class="form-control" id="ID${
+                    data.id
+                  }" aria-describedby="emailHelp" value="${data.id}">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Product name:</label>
-                  <input type="Product" class="form-control" id="Name" aria-describedby="emailHelp" value="${data.title}">
+                  <input type="Product" class="form-control" id="Name${
+                    data.id
+                  }" aria-describedby="emailHelp" value="${data.title}">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Image URL:</label>
-                  <input type="text" class="form-control" id="image" aria-describedby="emailHelp" value="${data.image}">
+                  <input type="text" class="form-control" id="image${
+                    data.id
+                  }" aria-describedby="emailHelp" value="${data.image}">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Description:</label>
-                  <input type="text" class="form-control" id="description" aria-describedby="description" value="${data.description}">
+                  <textarea class="form-control" id="description${data.id}">${
+      data.description
+    }</textarea>
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Price:</label>
-                  <input type="Price" class="form-control" id="price" aria-describedby="emailHelp" value="${data.price}">
+                  <input type="Price" class="form-control" id="price${
+                    data.id
+                  }" aria-describedby="emailHelp" value="${data.price}">
                 </div>
               </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" id="sc" class="btn btn-primary">Save changes</button>
+                  <button type="button" id="sc" class="btn btn-primary" onclick='new Editflower(${JSON.stringify(
+                    data
+                  )})'>Save changes</button>
                 </div>
               </div>
             </div>
@@ -220,39 +241,106 @@ let flowers = JSON.parse(localStorage.getItem("products"))
         </tr>
       </tbody>
       </div>
-      `
+      `;
+  });
+  deleteItems();
+}
+
+function deleteItems() {
+  const deleteButtons = [...document.querySelectorAll("#del")];
+  console.log(deleteButtons);
+  deleteButtons.forEach((dele, i) => {
+    dele.addEventListener("click", (e) => {
+      const roww = e.target.parentElement.parentElement;
+      roww.remove();
+      flowers.splice(e.target[i], 1);
+      console.log(flowers);
+      localStorage.setItem("products", JSON.stringify(flowers));
     });
+  });
+}
 
-    function deleteItems(){
-        const deleteButtons = [...document.querySelectorAll('#del')]
-        console.log(deleteButtons)
-        deleteButtons.forEach((dele,i)=>{
-            dele.addEventListener('click',(e)=>{
-                const roww = e.target.parentElement.parentElement
-                roww.remove()
-                flowers.splice(e.target[i],1)
-                console.log(flowers)
-                localStorage.setItem('products',JSON.stringify(flowers))
-            })
-        })
-        
-    }
+function addItems() {
+  console.log("I WORK");
+  let id = document.querySelector("#exampleInputID");
+  let name = document.querySelector("#exampleInputName");
+  let image = document.querySelector("#exampleInputImage");
+  let description = document.querySelector("#exampleInputDescription");
+  let price = document.querySelector("#exampleInputPrice");
 
-    deleteItems()
+  let newPartOfArray = {
+    id: id.value,
+    name: name.value,
+    image: image.value,
+    description: description.value,
+    price: price.value,
+  };
 
-    // function editHere(){
-    //     const saveChanges = [...document.querySelectorAll('#sc')]
-    // saveChanges.forEach((changes,i)=>{
-    //     changes.addEventListener("click", (e) =>{
-    //         let id = [...document.querySelectorAll('#ID')];
-    //         let product = [...document.querySelectorAll('#Name')];
-    //         let image = [...document.querySelectorAll('#image')];
-    //         let description = [...document.querySelectorAll('#description')];
-    //         let price = [...document.querySelectorAll('#price')];
-    //         let edit = [...document.querySelectorAll('#edit')];
-    //         let delete = [...document.querySelectorAll('#del')];
-    //         // console.log(changeDesc[i]);
-    //     })  
-    //     })
-    // }
-    
+  flowers.push(newPartOfArray);
+
+  let p = document.querySelector("#tableRow");
+
+  p.innerHTML = "";
+  displayProducts();
+  localStorage.setItem("products", JSON.stringify(flowers));
+}
+
+function Editflower(data) {
+  let begin = flowers.findIndex( p => {
+    location.reload();
+    return p.id == data.id;
+  });
+  this.name = document.querySelector(`Name${data.id}`).value;
+  this.image = document.querySelector(`image${data.id}`).value;
+  this.description = document.querySelector(`description${data.id}`).value;
+  this.price = document.querySelector(`price${data.id}`).value;
+  flowers[begin] = Object.assign({}, this);
+  localStorage.setItem("products", JSON.stringify(flowers));
+  displayProducts();
+}
+
+// const newFlower = 
+
+// deleteItems();
+// editItems();
+
+// function editItems() {
+//   console.log("HELLO I WORK!");
+//   const saveButtons = [...document.querySelectorAll("#sc")];
+//   saveButtons.forEach((save, i) => {
+//     save.addEventListener("click", (e) => {
+//       e.preventDefault()
+// let changeId = [...document.querySelectorAll('#ID')]
+// let changeName = [...document.querySelectorAll("#Name")];
+// let changeImage = [...document.querySelectorAll("#image")];
+// let changeDesc = [...document.querySelectorAll("#description")];
+// let changePrice = [...document.querySelectorAll("#price")];
+// let itemId = [...document.querySelectorAll('#newId')]
+// let itemNames = [...document.querySelectorAll("#newTitle")];
+// let itemDescription = [...document.querySelectorAll("#newDesc")];
+// let itemPrices = [...document.querySelectorAll("#newPrice")];
+// let itemImages = [...document.querySelectorAll("#newImage")];
+// console.log(changeDesc[i]);
+// let newId = (itemId[i].innerText = changeId[i].value);
+// let newName = (itemNames[i].innerText = changeName[i].value);
+// let newPrice = (itemPrices[i].innerText = changePrice[i].value);
+// let newImage = itemImages[i].setAttribute("src", changeImage.value);
+// console.log(data[i]);';
+//       let newerContent = {
+//         id:newId,
+//         name: newName,
+//         image: newImage,
+//         desc: changeDesc[i].value,
+//         price: newPrice,
+//       };
+//       flowers[i] = newerContent;
+//       let p = document.querySelector("#tableRow");
+//       // console.log(data);
+//       localStorage.setItem("products", JSON.stringify(flowers));
+//       p.innerHTML = "";
+//       let modal = document.querySelector(".modal-backdrop");
+//       modal.style.display = "none";
+//       showProducts();
+//   });
+// })
+// }

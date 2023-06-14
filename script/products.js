@@ -352,5 +352,23 @@ try{
     });
 }catch(e) {
     // location.reload()
+    alert(e)
+} finally{
+  Object.keys(flowers).forEach((flower) => {
+    let data = flowers[flower];
+    let p = document.querySelector("#products");
+    console.log(data[flower]);
+    p.innerHTML += `
+      <div class="card" style="width: 18rem;">
+    <img src="${data.image}" class="card-img-top img-fluid" loading="lazy" alt="product">
+    <div class="card-body">
+      <h5 class="card-title">${data.title}</h5>
+      <p class="card-text" id="price">${data.price}</p>
+      <p class="card-text">${data.description}</p>
+      <a href="#" class="btn">${data.button}</a>
+    </div>
+  </div>
+      `;
+  });
 }
 
