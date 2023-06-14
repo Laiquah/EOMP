@@ -285,6 +285,16 @@ function addItems() {
   localStorage.setItem("products", JSON.stringify(flowers));
 }
 
+// const newFlower = {
+//   id: flowers.length + 1,
+//   name: title,
+//   description: description,
+//   price: price
+// };
+
+// products.push(newFlower);
+// localStorage.setItem("products", JSON.stringify(flowers));
+
 function Editflower(data) {
   let begin = flowers.findIndex( p => {
     location.reload();
