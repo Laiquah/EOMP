@@ -1,141 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,
-body{
-    /* overflow-x: hidden; */
-    font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Kanit', sans-serif;
-    font-family: 'Rubik', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
-    /* background-color: #ad2e41; */
-    background-image: url(https://i.postimg.cc/tCBVXRLV/nick-nice-X438c-Ce-X2-E-unsplash.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 #logo{
-    width: 9rem;
+    width: 10rem;
 }
 
 #h14{
     font-weight: bolder;
     text-align: center; 
     text-decoration: underline;
-    font-family: 'Gamja Flower', cursive;
 }
 
-.nav-item{
-    color: white !important;
-}
-.nav-link{
-    border-bottom: 2px solid black;
-    margin: 0.5rem;
-    color:#EDB1F1 !important;
-    font-family: 'Gamja Flower', cursive;
+main{
+  background-color: #a1bec4;
 }
 
 header{
-    /* background-color:#684452; */
     color: white;
 }
 
 #footer{
-    color: white !important;
-    font-size: medium !important;
-    font-weight: bold;
-    /* background-color:#684452; */
-    text-align: center;
+  color: black;
+  text-align: center;
+  font-weight: 700;
 }
 
-ul{
-    margin:0;
-    padding:0;
-    display:flex;
-  }
-  
-  ul li{
-    list-style:none;
-    transition:0.2s;
-  }
-  
-  ul li a{
-    display: block;
-    position:relative;
-    text-decoration:none;
-    padding:5px;
-    font-size:18px;
-    font-family: sans-serif;
-    color:#fff;
-    text-transform:uppercase;
-    transition:0.5s;
-  }
-
-  ul:hover li a{
-    transform:scale(1);
-    opacity:0.2;
-    filter:blur(1px);
-  }
-  
-  ul li a:hover{
-    transform:scale(1.3);
-    transition: 0.8s;
-    opacity:1;
-    filter:blur(0);
-    text-decoration:none;
-    color:#fff;
-  }
-  
-  ul li a:before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    transition:0.5s;
-    transform-origin:right;
-    transform:scaleX(0);
-    z-index:-1;
-  }
-  
-  ul li a:hover:before{
-    transition:transform 0.5s;
-    transform-origin:left;
-    transform:scaleX(1);
-  }
-
-  .col-25 {
-    -ms-flex: 25%; 
-    flex: 25%;
-  }
-  
-  .col-50 {
-    -ms-flex: 50%;
-    flex: 50%;
-  }
-  
-  .col-75 {
-    -ms-flex: 75%;
-    flex: 75%;
-  }
-  
-  .col-25,
-  .col-50,
-  .col-75 {
-    padding: 0 16px;
-  }
-
-  #h14{
-    font-weight: bolder;
-    text-align: center; 
-    text-decoration: underline;
-    color:#EDB1F1 !important;;
+#description{
+  text-align: center;
 }
 
 .card-title{
@@ -143,13 +38,12 @@ ul{
     text-align: center;
     font-weight: bold;
     font-size: xx-large !important;
-    font-family: 'Gamja Flower', cursive;
 }
 
 .card{
     margin-bottom: 1rem;
     margin-left: 1rem;
-    background-color: #F185B7;
+    background-color:#e6d8d5;
 }
 
 img{
@@ -157,10 +51,9 @@ img{
 }
 
 .btn{
-    border: 4px solid#684452;
-    background-color:#684452;
+    border: 4px solid  #a1bec4;
+    background-color: #a1bec4;
     color: white;
-
 }
 
 #price{
