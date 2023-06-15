@@ -363,7 +363,7 @@ try{
           <h5 class="card-title">${data.title}</h5>
           <p class="card-text" id="price">${data.price}</p>
           <p class="card-text" id="description">${data.description}</p>
-          <center><a class="btn" id="addToCart" onclick="addCheckoutItem(${index})">${data.button}</a></center>
+          <center><a class="btn" id="addToCart" onclick="addCheckoutItem(${index})">add to cart</a></center>
         </div>
       </div>
         `;
