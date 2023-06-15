@@ -5,7 +5,20 @@
 }
 
 #logo{
-    width: 10rem;
+    width: 6rem;
+}
+
+header{
+    background-color: #a1bdc1;
+}
+
+#button{
+    background-color: #a1bec4;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 #cont{
@@ -17,6 +30,7 @@
 h1{
     font-weight: bold !important;
     text-align: center;
+    text-decoration: underline;
     /* margin-top: 10rem; */
 }
 
@@ -37,6 +51,7 @@ h6{
     font-weight: 500 !important;
     font-size: large !important;
     text-align: center !important;
+    text-decoration: underline;
 }
 
 #whoweare{
@@ -65,12 +80,26 @@ h6{
     align-items: center;
 }
 
+.random{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carousel{
+    margin-bottom: 1rem;
+}
+
 #what{
     text-align: center;
     margin: 1rem;
 }
 
 #footer{
+    background-color:#a1bec4;
     color: black;
     text-align: center;
     font-weight: 700;

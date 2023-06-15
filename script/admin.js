@@ -1,5 +1,14 @@
+let result = document.querySelector("#tableRow");
+let addBtn = document.querySelector("#addbtn");
+let tempName = document.querySelector("#exampleInputName");
+let tempImg = document.querySelector("#exampleInputImage");
+let tempDes = document.querySelector("#exampleInputDescription");
+let tempPrice = document.querySelector("#exampleInputPrice");
+let flower = JSON.parse(localStorage.getItem("products"));
+let tempID = 19;
+
 let flowers = JSON.parse(localStorage.getItem("products"));
-//   ? JSON.parse(localStorage.getItem("products"))
+  // ? JSON.parse(localStorage.getItem("products"))
 //   : localStorage.setItem(
 //       "products",
 //       JSON.stringify([
@@ -165,7 +174,7 @@ function displayProducts() {
   Object.keys(flowers).forEach((flower) => {
     let data = flowers[flower];
     let p = document.querySelector("#tableRow");
-    console.log(data.description);
+    // console.log(data.description);
     p.innerHTML += `
       <div class="table-responsive">
       <tbody id="admin">
@@ -237,53 +246,106 @@ function displayProducts() {
               </div>
             </div>
           </div></td>
-          <td><button id="del">Delete</button></td>
+          <td><button id="del" onclick="deleteButtons()">Delete</button></td>
         </tr>
       </tbody>
       </div>
       `;
   });
-  deleteItems();
+  deleteButtons()
 }
 
-function deleteItems() {
-  const deleteButtons = [...document.querySelectorAll("#del")];
-  console.log(deleteButtons);
-  deleteButtons.forEach((dele, i) => {
-    dele.addEventListener("click", (e) => {
-      const roww = e.target.parentElement.parentElement;
-      roww.remove();
-      flowers.splice(e.target[i], 1);
-      console.log(flowers);
+// function deleteItems() {
+//   const deleteButtons = [...document.querySelectorAll("#del")];
+//   console.log(deleteButtons);
+//   deleteButtons.forEach((dele, i) => {
+//     dele.addEventListener("click", (e) => {
+//       const roww = e.target.parentElement.parentElement;
+//       roww.remove();
+//       flowers.splice(e.target[i], 1);
+//       console.log(flowers);
+//       localStorage.setItem("products", JSON.stringify(flowers));
+//     });
+//   });
+// }
+
+function deleteButtons(){
+  dButton = [...document.querySelectorAll('#del')];
+  dButton.forEach((item)=>{
+      item.addEventListener('click', deleteProduct)
       localStorage.setItem("products", JSON.stringify(flowers));
-    });
-  });
+})
 }
 
-function addItems() {
-  console.log("I WORK");
-  let id = document.querySelector("#exampleInputID");
-  let name = document.querySelector("#exampleInputName");
-  let image = document.querySelector("#exampleInputImage");
-  let description = document.querySelector("#exampleInputDescription");
-  let price = document.querySelector("#exampleInputPrice");
-
-  let newPartOfArray = {
-    id: id.value,
-    name: name.value,
-    image: image.value,
-    description: description.value,
-    price: price.value,
-  };
-
-  flowers.push(newPartOfArray);
-
-  let p = document.querySelector("#tableRow");
-
-  p.innerHTML = "";
-  displayProducts();
+function deleteProduct(event){
+  result.innerHTML= ""
+  let start = dButton.indexOf(event.target);
+  flowers.splice(start, 1);
   localStorage.setItem("products", JSON.stringify(flowers));
+  displayProducts()
 }
+
+addBtn.addEventListener("click", addProduct);
+
+function addProduct(){
+  result.innerHTML = ""
+  event.preventDefault();
+  if(tempName.value == '', tempImg.value == '', tempDes.value == '', tempPrice.value == ''){
+      alert('Please add in a new Product!')
+      displayProducts();
+  } else {
+      
+      flowers.push({
+             id: tempID,
+             title: tempName.value,
+             image: tempImg.value,
+             description: tempDes.value,
+             price: tempPrice.value
+      });
+      tempID++
+      tempName.value = '', tempImg.value = '', tempDes.value = '', tempPrice.value = '';
+      localStorage.setItem("products", JSON.stringify(flowers));
+      displayProducts();
+  }
+}
+
+function sortFlowers(){
+  flowers = flowers.sort((a,b) => {
+      if (a.price < b.price) {
+          return -1 ;
+      } else {
+          return 1;
+      }
+  });
+  result.innerHTML = '';
+  displayProducts()
+}
+
+
+// function addItems() {
+//   console.log("I WORK");
+//   let id = document.querySelector("#exampleInputID");
+//   let title = document.querySelector("#exampleInputName");
+//   let image = document.querySelector("#exampleInputImage");
+//   let description = document.querySelector("#exampleInputDescription");
+//   let price = document.querySelector("#exampleInputPrice");
+
+//   let newPartOfArray = {
+//     id: tempID,
+//     title: title.value,
+//     image: image.value,
+//     description: description.value,
+//     price: price.value,
+//   };
+//   tempID++
+//   flowers.push(newPartOfArray);
+
+//   let p = document.querySelector("#tableRow");
+
+//   p.innerHTML = "";
+//   displayProducts();
+//   localStorage.setItem("products", JSON.stringify(flowers));
+// }
 
 // const newFlower = {
 //   id: flowers.length + 1,
@@ -296,20 +358,21 @@ function addItems() {
 // localStorage.setItem("products", JSON.stringify(flowers));
 
 function Editflower(data) {
-  let begin = flowers.findIndex( p => {
+  let begin = flowers.findIndex((p) => {
     location.reload();
     return p.id == data.id;
   });
-  this.name = document.querySelector(`Name${data.id}`).value;
-  this.image = document.querySelector(`image${data.id}`).value;
-  this.description = document.querySelector(`description${data.id}`).value;
-  this.price = document.querySelector(`price${data.id}`).value;
+  this.id = document.querySelector(`#ID${data.id}`).value;
+  this.title = document.querySelector(`#Name${data.id}`).value;
+  this.image = document.querySelector(`#image${data.id}`).value;
+  this.description = document.querySelector(`#description${data.id}`).value;
+  this.price = document.querySelector(`#price${data.id}`).value;
   flowers[begin] = Object.assign({}, this);
   localStorage.setItem("products", JSON.stringify(flowers));
   displayProducts();
 }
 
-// const newFlower = 
+// const newFlower =
 
 // deleteItems();
 // editItems();
