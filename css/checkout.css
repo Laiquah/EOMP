@@ -8,10 +8,14 @@
     width: 6rem;
 }
 
+img{
+  width: 10rem;
+}
+
 main{
   background-image: url(https://i.postimg.cc/rsGttzyb/alberto-bianchini-kr-Pdyjs1i-TM-unsplash-removebg-preview.png);
   background-color: #a1bec4;
-  height: 100vh;
+  height: max-content;
 
 }
 

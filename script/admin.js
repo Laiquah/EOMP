@@ -309,18 +309,35 @@ function addProduct(){
   }
 }
 
-function sortFlowers(){
-  flowers = flowers.sort((a,b) => {
-      if (a.price < b.price) {
-          return -1 ;
-      } else {
+let asc = true;
+function sortProduct(){
+  console.log(parseInt(flowers[0].price.split(' ')[1]))
+if(asc === true){
+  asc = false;
+  flowers= flowers.sort((a, b) => {
+    if (parseInt(a.price.split(' ')[1]) < parseInt(b.price.split(' ')[1])) {
+        return -1;
+    } else if (parseInt(a.price.split(' ')[1]) > parseInt(b.price.split(' ')[1])) {
+        return 1;
+    } else {
+      return 0;
+    }
+});
+} else {
+  asc = true
+flowers= flowers.sort((a, b) => {
+      if (parseInt(a.price.split(' ')[1]) < parseInt(b.price.split(' ')[1])) {
           return 1;
+      } else if (parseInt(a.price.split(' ')[1]) > parseInt(b.price.split(' ')[1])) {
+          return -1;
+      } else {
+        return 0;
       }
   });
-  result.innerHTML = '';
-  displayProducts()
 }
-
+result.innerHTML = '';
+displayProducts();
+}
 
 // function addItems() {
 //   console.log("I WORK");

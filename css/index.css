@@ -30,7 +30,7 @@ header{
 h1{
     font-weight: bold !important;
     text-align: center;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     /* margin-top: 10rem; */
 }
 

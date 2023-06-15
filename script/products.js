@@ -352,10 +352,10 @@ let flowers = JSON.parse(localStorage.getItem("products"))
 // })
 
 try{
-    Object.keys(flowers).forEach((flower) => {
+    Object.keys(flowers).forEach((flower, index) => {
       let data = flowers[flower];
       let p = document.querySelector("#products");
-      console.log(data[flower]);
+      // console.log(data[flower]);
       p.innerHTML += `
       <div class="card" style="width: 18rem;">
         <img src="${data.image}" class="card-img-top img-fluid" loading="lazy" alt="product">
@@ -363,7 +363,7 @@ try{
           <h5 class="card-title">${data.title}</h5>
           <p class="card-text" id="price">${data.price}</p>
           <p class="card-text" id="description">${data.description}</p>
-          <center><a href="#" class="btn">${data.button}</a></center>
+          <center><a class="btn" id="addToCart" onclick="addCheckoutItem(${index})">${data.button}</a></center>
         </div>
       </div>
         `;
@@ -372,4 +372,13 @@ try{
     // location.reload()
     alert(e)
 } 
+
+let addToCart = document.querySelector('#addToCart')
+let checkoutStorage = [];
+function addCheckoutItem(index) {
+  checkoutStorage.push(flowers[index])
+  console.log(flowers[index]);
+  localStorage.setItem('checkoutStorage', JSON.stringify(checkoutStorage))
+  console.log('Added!')
+}
 
