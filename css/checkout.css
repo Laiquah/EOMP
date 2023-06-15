@@ -5,10 +5,17 @@
 }
 
 #logo{
-    width: 10rem;
+    width: 6rem;
 }
 
 main{
+  background-image: url(https://i.postimg.cc/rsGttzyb/alberto-bianchini-kr-Pdyjs1i-TM-unsplash-removebg-preview.png);
+  background-color: #a1bec4;
+  height: 100vh;
+
+}
+
+header{
   background-color: #a1bec4;
 }
 
@@ -19,6 +26,7 @@ main{
 }
 
 #footer{
+  background-color:#a1bec4;
   color: black;
   text-align: center;
   font-weight: 700;

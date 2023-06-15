@@ -357,7 +357,7 @@ try{
       let p = document.querySelector("#products");
       console.log(data[flower]);
       p.innerHTML += `
-      <div class="card" style="width: 22rem;">
+      <div class="card" style="width: 18rem;">
         <img src="${data.image}" class="card-img-top img-fluid" loading="lazy" alt="product">
         <div class="card-body">
           <h5 class="card-title">${data.title}</h5>
