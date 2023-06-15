@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo{
+    width: 10rem;
+}
+
+#cont{
+    background-image: url(https://i.postimg.cc/jd4KBK8w/andrew-small-Efh-CUc-fjr-U-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+h1{
+    font-weight: bold !important;
+    text-align: center;
+    /* margin-top: 10rem; */
+}
+
+h4{
+    font-weight: 400 !important;
+    text-align: center;
+    font-style: italic;
+}
+
+h2{
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    text-align: center !important;
+    margin-top: 2rem;
+}
+
+h6{
+    font-weight: 500 !important;
+    font-size: large !important;
+    text-align: center !important;
+}
+
+#whoweare{
+    text-align: center;
+}
+
+#why{
+    text-align: center;
+    margin: 1rem;
+}
+
+#img{
+    width: 25rem;
+    margin: 20px;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#what{
+    text-align: center;
+    margin: 1rem;
+}
+
+#footer{
+    color: black;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media screen and (max-width:300px){
+    #container{
+        display: inline-block;
+    }
+
+    .cont{
+        display: inline-block;
+    }
+
+    #img{
+        margin: 0;
+    }
+}
